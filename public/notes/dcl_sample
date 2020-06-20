@@ -1,0 +1,56 @@
+var options = {
+    method: 'POST',
+    url: 'https://dcl.dev.compliancesystems.cloud/2.0/api/TransactionService/ExecuteJobTicket',
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: {
+      jobId: '',
+      jobTicket: {
+        CombinedOutput: true,
+        DocumentLibraryVersion: {
+          DocumentLibraryVersion: '2020.96'
+        },
+        ForwardingServiceList: {
+          ForwardingService: [
+            {
+              "Data": "<IMMConnectionConfig xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n <APIKey>CWng!33i</APIKey>\r\n <BaseUrl>https://integrations.immesign.com</BaseUrl>\r\n <BusinessAppUserId>vmintegrations\\intadmin</BusinessAppUserId>\r\n <HostFiId>CSIDocsFI</HostFiId>\r\n <PartnerId>CSIDocs</PartnerId>\r\n <TEEASP>v2019.2/TeAASP</TEEASP>\r\n <UserId>vmintegrations\\intadmin</UserId>\r\n <DocumentIndexes>\r\n <CustomProperty>\r\n <Name>Full_Name</Name>\r\n <Value>Full Name</Value>\r\n </CustomProperty>\r\n <CustomProperty>\r\n <Name>Account_Number</Name>\r\n <Value>Multiple Signers</Value>\r\n </CustomProperty>\r\n </DocumentIndexes>\r\n </IMMConnectionConfig>",
+              "Type": "IMMeSign"
+            }
+          ]
+        },
+        DataValuesList: [{
+          ContentType: 2,
+          Type: "json",
+          Content: ''
+        }],
+        DocList: [{
+          CrossReference: null,
+          FxlList: [{
+            ContentType: 5,
+            Content: 'Lending.xml'
+          }],
+          DstFile: {
+            ContentType: 2,
+            PdfProperties: {
+              ContentType: 1,
+              digitalsignatureprovider: 'IMMeSign',
+              drawdigitalsignaturefieldsas: 'digitalSignature'
+            }
+          },
+          NumberOfCopies: 0
+        }],
+        Prefs: {
+          NumberOfCopies: 1,
+          AutomaticSupplementalDiscovery: true,
+          LicenseKeyString: '03SZx+MTvrwjgnEUzNihXEhyiHg1rCMGeEjBsV8x5632z5UXxiR32HuQaEzvl7gr+a9Lt1fTgpjjOFqcF0RxOZ/ccF9m2bO7wVnD2dAEInT+i++pLIQ5Ju7i035FHjmNV18PeTuNVu9nHXmfthXrC6nDFGtyDzpcPEwW1KxUBb9gMxRrcg86XDxMFtSsVAW/YDMUa3IPOlw8TBbUrFQFv2A8JFIDQw6OEqw8YNH7krxcNjz1DD48hvHQAA8+YxpasI6YR/PIBX9EA1s04FSv2EoA==',
+          RenderMode: 8,
+          returnPartialDocSet: true
+        }
+      },
+      action: 6
+    },
+    json: true
+  };
+
+ 
